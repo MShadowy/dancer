@@ -13,8 +13,6 @@ namespace XRL.World.Parts.Skill
 
         public ActivatedAbilityEntry ActivatedAbility;
 
-        public List<GameObject> effected = new List<GameObject>();
-
         public MS_Busking()
         {
             base.Name = "MS_Busking";
@@ -33,11 +31,12 @@ namespace XRL.World.Parts.Skill
             int AgiBonus = ParentObject.Statistics["Agility"].Bonus;
             int EgoBonus = ParentObject.Statistics["Ego"].Bonus;
 
-            if (AgiBonus > 0 && EgoBonus > 0)
+            /*if (AgiBonus > 0 && EgoBonus > 0)
             {
-                Bonus = (AgiBonus + EgoBonus) / 2;
+                Bonus = (AgiBonus / 2) + (EgoBonus / 2);
             }
-            else if (AgiBonus > EgoBonus)
+            else*/ 
+            if (AgiBonus > EgoBonus)
             {
                 Bonus = AgiBonus;
             }
@@ -73,6 +72,7 @@ namespace XRL.World.Parts.Skill
                 int dur = 120 + rand;
                 int range = 6;
                 int count = 0;
+                List<GameObject> effected = new List<GameObject>();
                 Cell current = ParentObject.CurrentCell;
 
                 if (current != null)
@@ -93,16 +93,7 @@ namespace XRL.World.Parts.Skill
                                 if (target != null)
                                 {
                                     effected.Add(viewer);
-
-                                    for (int i = 0; i < effected.Count; i++)
-                                    {
-                                        BuskingEffect(target, viewer);
-                                    }
-
-                                    if (ParentObject.IsPlayer())
-                                    {
-                                        MessageQueue.AddPlayerMessage("&g" + viewer.BaseDisplayName + " is watching you. &y");
-                                    }
+                                    BuskingEffect(target, viewer);
                                 }
                             }
                         }
@@ -130,6 +121,8 @@ namespace XRL.World.Parts.Skill
                         {
                             MessageQueue.AddPlayerMessage("&gYou wrap up your show. &y");
                         }
+
+                        effected.Clear();
                     }
                 }
             }
@@ -139,15 +132,16 @@ namespace XRL.World.Parts.Skill
 
         public void BuskingEffect(Cell cell, GameObject target)
         {
-            int TBase = 14;
+            int TBase = 11;
             if (cell != null)
             {
-                target = effected.GetEnumerator().Current;
+                target = cell.GetCombatTarget(ParentObject, true, false, false, null, false, false, false, null);
                 Cell dropOff = ParentObject.CurrentCell.GetFirstEmptyAdjacentCell(1, 1);
                 if (target != null && target != ParentObject)
                 {
                     int DieRollA = Stat.Roll("1d20");
-                    if (DieRollA == 20 || DieRollA + CalculateStatBonus() > 15 + target.Statistics["Willpower"].Bonus + target.Statistics["Level"].BaseValue)
+                    int num = 10 + target.Statistics["Willpower"].Bonus + target.Statistics["Level"].BaseValue;
+                    if (DieRollA == 20 || DieRollA + CalculateStatBonus() >= num)
                     {
                         int tipLevel = 0;
                         for (int i = 0; i < 3; i++)
@@ -160,30 +154,33 @@ namespace XRL.World.Parts.Skill
                         }
                         if (tipLevel > 0)
                         {
-
                             int rand = Stat.Random(1, 100);
                             if (tipLevel == 3)
                             {
                                 string BP;
+                                string desc;
                                 int tier = target.GetTier();
                                 if (rand <= 33)
                                 {
                                     BP = "Armor " + tier.ToString();
+                                    desc = "some armor";
                                 }
                                 else if (rand > 33 && rand <= 66)
                                 {
-                                    BP = "Missile Weapon " + tier.ToString();
+                                    BP = "Junk " + tier.ToString();
+                                    desc = "something that looks suspiciously like junk";
                                 }
                                 else
                                 {
-                                    BP = "Melee Weapon " + tier.ToString();
+                                    BP = "Melee Weapons " + tier.ToString();
+                                    desc = "a weapon";
                                 }
-                                dropOff.AddTableObject("Melee Weapon 1");
+                                dropOff.AddTableObject(BP);
 
                                 if (ParentObject.IsPlayer())
                                 {
                                     MessageQueue.AddPlayerMessage("&g" + target.BaseDisplayName + " pauses for a while to watch you perform. " +
-                                                "After a short while they stride away, dropping off a " + BP + " at your feet with a soft thunk as they leave. &y");
+                                                "After a short while they stride away, dropping off " + desc + " at your feet with a soft thunk as they leave. &y");
                                 }
                             }
                             else if (tipLevel == 2)
@@ -202,14 +199,13 @@ namespace XRL.World.Parts.Skill
                                 if (ParentObject.IsPlayer())
                                 {
                                     MessageQueue.AddPlayerMessage("&gA dull metallic clunk rings out as a " + BP.ToLower() +
-                                                " is dropped carelessly into your busking pan by a passing" + target.BaseDisplayName + "&y.");
+                                                " is dropped carelessly into your busking pan by a passing " + target.BaseDisplayName + "&y.");
                                 }
                             }
                             else
                             {
                                 int Drams = Stat.Roll("1d2");
                                 dropOff.AddObject("FreshWaterTip", Drams);
-
                                 if (ParentObject.IsPlayer())
                                 {
                                     MessageQueue.AddPlayerMessage("&gYour busking pan hums as a dram or two of water is poured into it by "
