@@ -13,6 +13,8 @@ namespace XRL.World.Parts.Skill
 
         public ActivatedAbilityEntry ActivatedAbility;
 
+        public List<GameObject> effected = new List<GameObject>();
+
         public MS_Busking()
         {
             base.Name = "MS_Busking";
@@ -47,20 +49,108 @@ namespace XRL.World.Parts.Skill
             return Bonus;
         }
 
+        public override bool FireEvent(Event E)
+        {
+            if (E.ID == "CommandCustomsBusking")
+            {
+                if (ParentObject.pPhysics != null && ParentObject.pPhysics.IsFrozen())
+                {
+                    if (ParentObject.IsPlayer())
+                    {
+                        Popup.Show("You are frozen solid!", true);
+                    }
+                    return true;
+                }
+                if (ParentObject.AreHostilesNearby())
+                {
+                    if (ParentObject.IsPlayer())
+                    {
+                        Popup.Show("You can't perform with enemies nearby!", true);
+                    }
+                    return true;
+                }
+                int rand = Stat.Roll("5d6");
+                int dur = 120 + rand;
+                int range = 6;
+                int count = 0;
+                Cell current = ParentObject.CurrentCell;
+
+                if (current != null)
+                {
+                    if (ParentObject.IsPlayer())
+                    {
+                        MessageQueue.AddPlayerMessage("&gYou lay down a tin nearby and begin your performance. &y");
+                    }
+
+                    foreach (GameObject viewer in current.ParentZone.FastSquareSearch(current.X, current.Y, range, "Combat"))
+                    {
+                        if (viewer != ParentObject)
+                        {
+                            if (ParentObject.DistanceTo(viewer) <= range && viewer.HasPart("Brain") && !viewer.pBrain.IsHostileTowards(ParentObject)
+                                    && !effected.Contains(viewer))
+                            {
+                                Cell target = viewer.CurrentCell;
+                                if (target != null)
+                                {
+                                    effected.Add(viewer);
+
+                                    for (int i = 0; i < effected.Count; i++)
+                                    {
+                                        BuskingEffect(target, viewer);
+                                    }
+
+                                    if (ParentObject.IsPlayer())
+                                    {
+                                        MessageQueue.AddPlayerMessage("&g" + viewer.BaseDisplayName + " is watching you. &y");
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    if (count > 1 && ParentObject.AreHostilesNearby())
+                    {
+                        count = dur;
+                        if (ParentObject.IsPlayer())
+                        {
+                            Popup.Show("Your performance is interrupted! &y");
+                        }
+                    }
+                    while (count < dur)
+                    {
+                        if (ParentObject.IsValid())
+                        {
+                            ParentObject.UseEnergy(1000, "Pass", null);
+                            count = count + 1;
+                        }
+                    }
+                    if (count == dur)
+                    {
+                        if (ParentObject.IsPlayer())
+                        {
+                            MessageQueue.AddPlayerMessage("&gYou wrap up your show. &y");
+                        }
+                    }
+                }
+            }
+
+            return base.FireEvent(E);
+        }
+
         public void BuskingEffect(Cell cell, GameObject target)
         {
             int TBase = 14;
             if (cell != null)
             {
-                target = cell.GetCombatTarget(ParentObject, true, false, false, null, false, false, false, null);
-                Cell dropOff = ParentObject.CurrentCell.GetFirstEmptyAdjacentCell(1,1);
-                if (target !=null)
+                target = effected.GetEnumerator().Current;
+                Cell dropOff = ParentObject.CurrentCell.GetFirstEmptyAdjacentCell(1, 1);
+                if (target != null && target != ParentObject)
                 {
                     int DieRollA = Stat.Roll("1d20");
                     if (DieRollA == 20 || DieRollA + CalculateStatBonus() > 15 + target.Statistics["Willpower"].Bonus + target.Statistics["Level"].BaseValue)
                     {
                         int tipLevel = 0;
-                        for (int i =0; i < 3; i++)
+                        for (int i = 0; i < 3; i++)
                         {
                             int DieRollB = Stat.Roll("3d6");
                             if (DieRollB > TBase + tipLevel)
@@ -154,82 +244,6 @@ namespace XRL.World.Parts.Skill
                     CooldownMyActivatedAbility(ActivatedAbilityID, 500, null, "Agility");
                 }
             }
-        }
-
-        public override bool FireEvent(Event E)
-        {
-            if (E.ID == "CommandCustomsBusking")
-            {
-                if (ParentObject.pPhysics != null && ParentObject.pPhysics.IsFrozen())
-                {
-                    if (ParentObject.IsPlayer())
-                    {
-                        Popup.Show("You are frozen solid!", true);
-                    }
-                    return true;
-                }
-                if (ParentObject.AreHostilesNearby())
-                {
-                    if (ParentObject.IsPlayer())
-                    {
-                        Popup.Show("You can't perform with enemies nearby!", true);
-                    }
-                    return true;
-                }
-                int rand = Stat.Roll("5d6");
-                int dur = 120 + rand;
-                int range = 6;
-                int count = 0;
-                Cell current = ParentObject.CurrentCell;
-                List<GameObject> effected = new List<GameObject>();
-
-                if (current != null)
-                {
-                    if (ParentObject.IsPlayer())
-                    {
-                        MessageQueue.AddPlayerMessage("&gYou lay down a tin nearby and begin your performance. &y");
-                    }
-
-                    foreach (GameObject viewer in current.ParentZone.FastSquareSearch(current.X, current.Y, range, "Combat"))
-                    {
-                        if (viewer == ParentObject) { } else
-                        {
-                            if (ParentObject.DistanceTo(viewer) <= range && viewer.HasPart("Brain") && !viewer.pBrain.IsHostileTowards(ParentObject)
-                                    && !effected.Contains(viewer))
-                            {
-                                BuskingEffect(current, viewer);
-                                effected.Add(viewer);
-                            }
-                        }
-                    }
-
-                    if (count > 1 && ParentObject.AreHostilesNearby())
-                    {
-                        count = dur;
-                        if (ParentObject.IsPlayer())
-                        {
-                            Popup.Show("Your performance is interrupted! &y");
-                        }
-                    }
-                    while (count < dur)
-                    {
-                        if (ParentObject.IsValid())
-                        {
-                            ParentObject.UseEnergy(1000, "Pass", null);
-                            count = count + 1;
-                        }
-                    }
-                    if (count == dur)
-                    {
-                        if (ParentObject.IsPlayer())
-                        {
-                            MessageQueue.AddPlayerMessage("&gYou wrap up your show. &y");
-                        }
-                    }
-                }
-            }
-
-            return base.FireEvent(E);
         }
 
         public override bool AddSkill(GameObject GO)
