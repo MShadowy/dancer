@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<skills>
+  <skill Name="Customs and Folklore" Load="Merge">
+    <power Name="Busking" Cost="150" Attribute="Agility,Ego|Ego,Agility" Minimum="21,17|21,17" Class="MS_Busking" Snippet="busking" Description="Through dance or song or some other means you entertain passersby and gather water and trinkets with which to sustain your being."></power>
+  </skill>
+</skills>

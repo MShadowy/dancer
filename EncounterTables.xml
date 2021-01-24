@@ -1,0 +1,207 @@
+<encountertables>
+
+  <encountertable Name="SwdDancerMelee">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="Long Sword5"></object>
+      <object Chance="20" Number="1d1" Blueprint="Long Sword6"></object>
+      <object Chance="20" Number="1d1" Blueprint="Long Sword5th"></object>
+      <object Chance="20" Number="1d1" Blueprint="Long Sword6th"></object>
+      <object Chance="10" Number="1d1" Blueprint="Gaslight Sword" CellChance="100"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="AxeDancerMelee">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="Battle Axe5"></object>
+      <object Chance="20" Number="1d1" Blueprint="Battle Axe6"></object>
+      <object Chance="20" Number="1d1" Blueprint="Battle Axe5th"></object>
+      <object Chance="20" Number="1d1" Blueprint="Battle Axe6th"></object>
+      <object Chance="5" Number="1d1" Blueprint="Battle Axe7th"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="DancejawBling">
+    <objects>  
+      <object Chance="1" Number="1d1" Blueprint="Snakeskin Armlet"></object>
+      <object Chance="1" Number="1d1" Blueprint="Mirrorshades"></object>
+      <object Chance="1" Number="1d1" Blueprint="Issachari Sun Veil"></object>
+      <object Chance="20" Number="1d1" Blueprint="Crimson Hood"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_cVeil"></object>
+      <object Chance="20" Number="1d1" Blueprint="Scarlet Shawl"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="DanceClothes">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="MS_dClothes1"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_dClothes2"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_dClothes3"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="EliteDancerHeadgear">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="MS_dCirclet"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WdCirclet"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="EliteDancerHands">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="MS_Bangles"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WarBangles"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 1R" Load="Merge">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="MS_Bangles"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_dCirclet"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_dClothes1"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_dClothes2"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_dClothes3"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_cVeil"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 2C" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_Torque"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 3C" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_Torque"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 4C" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WardancersMail"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 4R" Load="Merge">
+    <objects>
+      <object Chance="10" Number="1d1" Blueprint="MS_WarBangles"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WdCirclet"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WdBuckler"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 5C" Load="Merge">
+    <objects>
+      <object Chance="10" Number="1d1" Blueprint="MS_WardancersMail"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WarBangles"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WdCirclet"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WdBuckler"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 5R" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_QSTorque"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_WardancersMail"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 7C" Load="Merge">
+    <objects>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanSkin"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_QSTorque"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanBangles"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanCirclet"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanVeil"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Armor 7R" Load="Merge">
+    <objects>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanSkin"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_QSTorque"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanBangles"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanCirclet"></object>
+      <object Chance="20" Number="1d1" Blueprint="MS_atanVeil"></object>
+    </objects>
+  </encountertable>
+  
+  <!-- Various random adventuring dancer encounters; ruins, caves, jungles -->
+  
+  <encountertable Name="Ruin Creatures 3" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WildDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="Ruin Creatures 4" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WildDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="Ruin Creatures 5" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WildDancer"></object>
+      <object Chance="1" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="1" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="Ruin Creatures 6" Load="Merge">
+    <objects>
+      <object Chance="2" Number="1d1" Blueprint="MS_WildDancer"></object>
+      <object Chance="2" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="2" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="Ruin Creatures 7" Load="Merge">
+    <objects>
+      <object Chance="1" Number="1d1" Blueprint="MS_WildDancer"></object>
+      <object Chance="5" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="5" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="Ruin Creatures 8" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="5" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="JungleAnimals3" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WildDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="JungleAnimals4" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WildDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="JungleAnimals5" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_WildDancer"></object>
+      <object Chance="1" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="1" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="JungleAnimals6" Load="Merge">
+    <objects>
+      <object Chance="2" Number="1d1" Blueprint="MS_WildDancer"></object>
+      <object Chance="2" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="2" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="JungleAnimals7" Load="Merge">
+    <objects>
+      <object Chance="1" Number="1d1" Blueprint="MS_WildDancer"></object>
+      <object Chance="5" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="5" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+  <encountertable Name="JungleAnimals8" Load="Merge">
+    <objects>
+      <object Chance="5" Number="1d1" Blueprint="MS_SwordDancer"></object>
+      <object Chance="5" Number="1d1" Blueprint="MS_AxeDancer"></object>
+    </objects>
+  </encountertable>
+
+</encountertables>

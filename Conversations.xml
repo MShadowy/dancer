@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+  <!-- Normal Dancers-->
+  <conversation ID="DancerConversation">
+    <node ID= "Start">
+      <text>
+Stay awhile, o traveler, and watch of my dance.~
+Come, wayfarer and sit a while while I dance for you.~
+Live and drink, =player.formalAddressTerm=.</text>
+      <choice GotoID="End">Live and Drink, Dancer.</choice>
+    </node>
+  </conversation>
+  
+  <!-- Adventuring Dancers-->
+  <conversation ID="AdvDancerConversation">
+    <node ID= "Start">
+      <text>
+Watch if you please, wayfarer.~
+Forgive my brusqueness =player.formalAddressTerm=, but I must get back to my training.~
+Live and drink, traveler.</text>
+      <choice GotoID="End">Live and Drink, Dancer.</choice>
+    </node>
+  </conversation>
+
+</conversations>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<subtypes>
+<class ID="Callings" ChargenTitle="Choose Calling" SingularTitle="calling">
+    <!-- Overall concept; a runaway trained as an entertainer and domestic servant -->
+    <subtype Name="Dancer" Code="m" Skills="Acrobatics_Dodge,Acrobatics_Jump,Tactics_Juke,MS_Busking" Gear="StartingGear_Dancer" Tile="creatures/dancer.png" DetailColor="r">
+      <stat Name="Agility" Bonus="2"></stat>
+	  </subtype>
+</class>
+</subtypes>
