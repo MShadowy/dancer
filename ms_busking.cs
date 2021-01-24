@@ -13,8 +13,6 @@ namespace XRL.World.Parts.Skill
 
         public ActivatedAbilityEntry ActivatedAbility;
 
-        public int nextPerformance = 1000;
-
         public MS_Busking()
         {
             base.Name = "MS_Busking";
@@ -59,7 +57,7 @@ namespace XRL.World.Parts.Skill
                 if (target !=null)
                 {
                     int DieRollA = Stat.Roll("1d20");
-                    if (DieRollA == 20 || DieRollA + CalculateStatBonus() > 15 + target.Statistics["Will"].Bonus + target.Statistics["Level"].BaseValue)
+                    if (DieRollA == 20 || DieRollA + CalculateStatBonus() > 15 + target.Statistics["Willpower"].Bonus + target.Statistics["Level"].BaseValue)
                     {
                         int tipLevel = 0;
                         for (int i =0; i < 3; i++)
@@ -90,7 +88,7 @@ namespace XRL.World.Parts.Skill
                                 {
                                     BP = "Melee Weapon " + tier.ToString();
                                 }
-                                dropOff.AddTableObject(BP);
+                                dropOff.AddTableObject("Melee Weapon 1");
 
                                 if (ParentObject.IsPlayer())
                                 {
@@ -109,7 +107,7 @@ namespace XRL.World.Parts.Skill
                                 {
                                     BP = "Copper Nugget";
                                 }
-                                dropOff.AddObject(BP, 1);
+                                dropOff.AddTableObject("Junk 1");
 
                                 if (ParentObject.IsPlayer())
                                 {
@@ -141,7 +139,7 @@ namespace XRL.World.Parts.Skill
                             }
                         }
                     }
-                    else if (DieRollA + CalculateStatBonus() <= 15 + target.Statistics["Will"].Bonus + target.Statistics["Level"].BaseValue)
+                    else if (DieRollA + CalculateStatBonus() <= 15 + target.Statistics["Willpower"].Bonus + target.Statistics["Level"].BaseValue)
                     {
                         int rand = Stat.Random(1, 100);
                         if (rand < 26)
@@ -184,7 +182,6 @@ namespace XRL.World.Parts.Skill
                 int count = 0;
                 Cell current = ParentObject.CurrentCell;
                 List<GameObject> effected = new List<GameObject>();
-                ParentObject.TurnTick(dur);
 
                 if (current != null)
                 {
@@ -195,7 +192,7 @@ namespace XRL.World.Parts.Skill
 
                     foreach (GameObject viewer in current.ParentZone.FastSquareSearch(current.X, current.Y, range, "Combat"))
                     {
-                        if (viewer != ParentObject)
+                        if (viewer == ParentObject) { } else
                         {
                             if (ParentObject.DistanceTo(viewer) <= range && viewer.HasPart("Brain") && !viewer.pBrain.IsHostileTowards(ParentObject)
                                     && !effected.Contains(viewer))
