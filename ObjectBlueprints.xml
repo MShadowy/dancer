@@ -37,8 +37,8 @@
     <part Name="Commerce" Value="7"></part>
     <part Name="Description" Short="Paired circles of bronze or copper fitted with gems and jangling beads, to be worn about the wrist."></part>
     <part Name="Physics" Weight="3"></part>
+    <part Name="Metal" />
     <tag Name="Tier" Value="1"></tag>
-    <intproperty Name="Inorganic" Value="0" />
     <tag Name="Gender" Value="plural" />
   </object>
   <object Name="MS_dCirclet" Inherits="BaseHat">
@@ -47,9 +47,9 @@
     <part Name="Commerce" Value="5"></part>
     <part Name="Description" Short="A ring of pounded copper, serving host to an array of chiming beads."></part>
     <part Name="Physics" Weight="1"></part>
+    <part Name="Metal" />
     <tag Name="Tier" Value="1"></tag>
     <tag Name="DynamicObjectsTable:Headwear"></tag>
-    <intproperty Name="Inorganic" Value="0" />
   </object>
   <object Name="MS_cVeil" Inherits="BaseMask">
     <part Name="Armor" AV="0" DV="1" WornOn="Face" />
@@ -68,8 +68,8 @@
     <part Name="Commerce" Value="15"></part>
     <part Name="Description" Short="A simple torque large enough to encircle ones thigh. It bears Masha's cerulean mark, said to bring protection to the wearer."></part>
     <part Name="Physics" Weight="3"></part>
+    <part Name="Metal" />
     <tag Name="Tier" Value="2"></tag>
-    <intproperty Name="Inorganic" Value="0" />
     <tag Name="Gender" Value="plural" />
   </object>
   <!-- Tier 4 -->
@@ -87,21 +87,21 @@
     <part Name="Armor" Strength="1" AV="1" DV="1" WornOn="Hands"></part>
     <part Name="Render" DisplayName="&amp;Kh&amp;re&amp;Kavy&amp;y bangles" RenderString="]" ColorString="&amp;K" DetailColor="r" Tile="Items/ms_bangles.png"></part>
     <part Name="Commerce" Value="60"></part>
-    <part Name="Description" Short="Black steel pounded into cunningly fluted half rings and torques laid over a sleeves of red silk."></part>
+    <part Name="Description" Short="Black steel pounded into cunningly fluted half rings and torques laid over a sleeve of red silk."></part>
     <part Name="Physics" Weight="5"></part>
+    <part Name="Metal" />
     <tag Name="Tier" Value="4"></tag>
-    <intproperty Name="Inorganic" Value="0" />
     <tag Name="Gender" Value="plural" />
   </object>
   <object Name="MS_WdCirclet" Inherits="BaseHat">
     <part Name="Armor" AV="1" DV="1" WornOn="Head"></part>
     <part Name="Render" DisplayName="&amp;rw&amp;Ka&amp;rrdancers&amp;y circlet" RenderString="]" ColorString="&amp;K" DetailColor="r" Tile="Items/ms_circlet.png"></part>
-    <part Name="Commerce" Value="5"></part>
+    <part Name="Commerce" Value="60"></part>
     <part Name="Description" Short="Black steel pounded into a cunningly fluted circlet festooned in dazzling chimes."></part>
     <part Name="Physics" Weight="5"></part>
+    <part Name="Metal" />
     <tag Name="Tier" Value="4"></tag>
     <tag Name="DynamicObjectsTable:Headwear"></tag>
-    <intproperty Name="Inorganic" Value="0" />
   </object>
   <object Name="MS_WdBuckler" Inherits="BaseShield">
     <part Name="Render" DisplayName="&amp;rw&amp;Ka&amp;rrdancers&amp;y buckler" Tile="items/sw_buckler.bmp" ColorString="&amp;K" DetailColor="r"></part>
@@ -135,7 +135,6 @@
     <part Name="Description" Short="As Mathematic intransigence fell away, cast off theorems were turned to the process of material; precise inputs were tuned in stellar furnaces to produce small amounts of gleaming atan and forged into improbable surfaces that scintillate with otherworldly colors. Vestments of this type were prized by the highest dancers of the Eaters."></part><!--A gleaming suit of metal strips and filaments that cleave to ones skin, vestments of this type were prized by the highest dancers of the Eaters.-->
     <part Name="Physics" Weight="10" FlameTemperature="9999" VaporTemperature="9999"></part>
     <tag Name="Tier" Value="7"></tag>
-    <intproperty Name="Inorganic" Value="0" />
   </object>
   <object Name="MS_atanBangles" Inherits="BaseGlove"> <!-- makes melee attacks cost 20% less energy -->
     <part Name="Armor" AV="2" DV="1" Elec="6" Cold="6" Heat="6" Acid="6"  WornOn="Hands"></part>
@@ -145,7 +144,6 @@
     <part Name="Description" Short="As Mathematic intransigence fell away, cast off theorems were turned to the process of material; precise inputs were tuned in stellar furnaces to produce small amounts of gleaming atan and forged into improbable bands that shift with otherworldly motion. Vestments of this type were prized by the highest dancers of the Eaters."></part>
     <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999"></part>
     <tag Name="Tier" Value="7"></tag>
-    <intproperty Name="Inorganic" Value="0" />
     <tag Name="Gender" Value="plural" />
   </object>  <object Name="MS_atanCirclet" Inherits="BaseHat"> <!-- makes abilities 5% recover faster -->
     <part Name="Armor" AV="2" DV="1" Elec="6" Cold="6" Heat="6" Acid="6"  WornOn="Head"></part>
@@ -155,8 +153,6 @@
     <part Name="Description" Short="As Mathematic intransigence fell away, cast off theorems were turned to the process of material; precise inputs were tuned in stellar furnaces to produce small amounts of gleaming atan and forged into improbable loops that ring with otherworldly chimes. Vestments of this type were prized by the highest dancers of the Eaters."></part>
     <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999"></part>
     <tag Name="Tier" Value="7"></tag>
-    <intproperty Name="Inorganic" Value="0" />
-    <tag Name="Gender" Value="plural" />
   </object>
    <object Name="MS_atanVeil" Inherits="BaseMask">
     <part Name="Armor" AV="1" DV="1"  Elec="6" Cold="6" Heat="6" Acid="6"  WornOn="Face" />
@@ -166,7 +162,6 @@
     <part Name="Description" Short="As Mathematic intransigence fell away, cast off theorems were turned to the process of material; precise inputs were tuned in stellar furnaces to produce small amounts of gleaming atan, shards of which were woven into shadowy nanosilk veils which shimmer with otherwordly vibrations. Vestments of this type were prized by the highest dancers of the Eaters." />
     <part Name="Physics" Weight="3" FlameTemperature="9999" VaporTemperature="9999"/>
     <tag Name="Tier" Value="7" />
-    <intproperty Name="Inorganic" Value="0" />
   </object>
   <object Name="MS_atanBuckler" Inherits="BaseShield">
     <part Name="Render" DisplayName="&amp;Ya&amp;mtan&amp;y buckler" Tile="items/sw_buckler.bmp" ColorString="&amp;m" DetailColor="Y"></part>
@@ -174,23 +169,75 @@
     <part Name="Description" Short="As Mathematic intransigence fell away, cast off theorems were turned to the process of material; precise inputs were tuned in stellar furnaces to produce small amounts of gleaming atan and forged into improbable planes, joined together as a small shield which glimmers with otherwordly light. Vestments of this type were prized by the highest dancers of the Eaters."></part>
     <part Name="Commerce" Value="865"></part>
     <part Name="Physics" Weight="5"></part>
-    <part Name="Metal"></part>
     <tag Name="Tier" Value="7"></tag>
   </object>
+  
   <!--2H Vibro Swords-->
-<!--Water Stuff for Busking-->
+  <object Name="MS_2H_VibroBlade" Inherits="BaseLongBlade">
+    <part Name="Render" DisplayName="{{c|vibro greatblade}}" RenderString="\" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="0" BaseDamage="2d6" Skill="LongBlades" />
+    <part Name="Commerce" Value="300" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" />
+    <part Name="Description" Short="A humming white blade extends almost the full span of a mans height from a dense black plastic grip." />
+    <part Name="RulesDescription" Text="When charged, this weapon's penetration value is equal to the defender's armor value." />
+    <part Name="Examiner" AlternateDisplayName="two handed sword" Complexity="5" />
+    <part Name="TinkerItem" Bits="0025" CanDisassemble="true" CanBuild="true" />
+    <part Name="Metal" />
+    <part Name="VibroWeapon" ChargeUse="100" />
+    <part Name="Physics" Weight="8" UsesTwoSlots="true"/>
+    <tag Name="Mods" Value="LongBladeMods,BladeMods,WeaponMods,CommonMods,ElectronicsMods" />
+    <tag Name="Tier" Value="5" />
+    <tag Name="Hitsound" Value = "Hit_Default" />
+  </object>
+  <object Name="MS_VibroFalx" Inherits="Long Sword3th">
+    <part Name="Render" DisplayName="ornate vibro falx" Tile="items/ms_falx.png" ColorString="&amp;K" RenderString="\" />
+    <part Name="Commerce" Value="400" />
+    <part Name="Description" Short="A hulking black  blade with a single edge, the spine hunches forward along it's length towards a cleavers bow. Swirling glyphs of gold wrap the hilt and climb halfway up the swords side." />
+    <part Name="Physics" Weight="10" />
+    <part Name="MeleeWeapon" PenBonus="0" MaxStrengthBonus="0" BaseDamage="2d8+2" Skill="LongBlades" />
+    <part Name="BootSequence" BootTime="3" VerbOnBootInitialized="buzz" VerbOnBootAborted="clack" VerbOnBootDone="hum" />
+    <part Name="ZeroPointEnergyCollector" ChargeRate="40" World="JoppaWorld,OrbWorld" />
+    <part Name="Circuitry" />
+    <part Name="VibroWeapon" ChargeUse="20" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="Tier" Value="7" />
+  </object>
+  
+  <!--Water Stuff for Busking-->
   <object Name="FreshWaterTip" Inherits="Water">
     <part Name="LiquidVolume" MaxVolume="-1" Volume="1" InitialLiquid="water-1000" />
   </object>
   
   <!-- Dancer NPCs -->
-  <!-- Regular, non-adventurous dancers; mainly show up in hookah tents -->
-  <object Name="MS_Dancer" Inherits="NPC">
-    <part Name="Brain" hostile="false" Wanders="true" Factions="Prey-100"></part>
+  <object Name="MS_BaseDancer" Inherits="BaseHumanoid">
+    <part Name="Brain" hostile="false" Factions="Dancers-100"></part>
     <part Name="Render" DisplayName="dancer" Tile="creatures/dancer_flipped.png" RenderString="h" ColorString="&amp;w" DetailColor="K" />
-    <part Name="Description" Short="The sands and loam pound beneath =pronouns.possessive= feet, moving them in a display of rapturous athleticism. Passersby watch, admiring, as =pronouns.subjective= =verb:trade= in momentary beauty, and so slowly =verb:accumulate= the drams and baubles needed for =pronouns.possessive= life." />
-    <stat Name="Agility" Boost="1"></stat>
     <stat Name="DV" Value="3" />
+    <stat Name="Hitpoints" Value="25" />
+    <mutation Name = "HeightenedHearing" Level="4" />
+    <part Name="RandomMutations" Mental="1d1" MentalLevel="1d6" Physical="1d2" PhysicalLevel="1d6" />
+    <skill Name="Acrobatics_Dodge" />
+    <tag Name="HeroNamePrefixes" Value="Aamu,Aeo,Ajin,Arim,Baa,Besh,Biir,Bun,Cea,Cil,Cioi,Cul,Dal,Deia,Dis,Dum,Eam,Eina,Eful,Eman,Fai,Feja,Fia,Fiem,Gana,Gein,Gra,Guzh,Haizh,Heia,Housh,Hunfa,Iada,Iden,Irie,Ius,Jai,Jhem,Jima,Jum,Kars,Keal,Kirn,Kiis,Laii,Lema,Lir,Lul,Mem,Meir,Mha,Muu,Nang,Nef,Neir,Nul,Oam,Oloa,Orae,Osh,Phai,Pham,Peri,Pul,Qa,Qemu,Qis,Qu,Ral,Rehm,Riam,Rohm,Saim,Sen,Shir,Syl,Taaf,Tabai,Teru,Tir,Uan,Uin,Ulaa,Urei,Vali,Ven,Veij,Viru,Wan,Werr,Wika,Wui,Ya,Yeia,Yiga,Yun,Xi,Zha,Zeid,Zil,Zol" />
+    <tag Name ="HeroNamePrefixAmount" Value="1" />
+    <tag Name="HeroNameInfixAmount" Value="0" />
+    <tag Name="HeroNamePostfixes" Value="aala,afna,ahrma,amja,ban,bieo,bita,byra,caeia,ceng,ciouel,cul,dafu,dera,dhola,dirma,edi,efil,ejhan,emish,fan,feim,fiir,ful,gal,gein,ghera,gyn,ham,heian,hiija,huj,icim,ifal,ijer,izha,jal,jera,jizu,jul,kem,kezha,kiir,kumu,lakh,lamu,liis,lul,maij,mera,meimu,mun,naia,nim,nitu,num,oa,ocin,omej,ozh,pah,pera,phem,pyma,qauau,qeia,qiun,qyam,rahga,rema,riija,rorae,saaf,seng,sha,suha,taan,teri,tir,tysa,uaua,ujei,urem,uzhaa,vanj,vela,virtu,vu,wam,wei,werau,wizh,yai,yem,yira,yu,xem,zhae,zirf,zhi,zun" />
+    <tag Name="HeroNamePostfixAmount" Value="0-2" />
+    <tag Name="HeroTwoNameChanve" Value="0" />
+    <tag Name="HeroNameHyphenationChance" Value="0" />
+    <tag Name="HeroHPBoost" Value="2" />
+    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
+    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
+    <tag Name="RandomPronounSetChance" Value="25" />
+    <tag Name="NoHateFactions" Value="Pariahs" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  <object Name="MS_Dancer" Inherits="MS_BaseDancer">
+    <part Name="Brain" Wanders="true"  hostile="false"></part>
+    <part Name="Render" DisplayName="dancer" ColorString="&amp;w" DetailColor="K" />
+    <part Name="Description" Short="The sands and loam pound beneath =pronouns.possessive= feet, moving them in a display of rapturous athleticism. Passersby watch, admiring, as =pronouns.subjective= =verb:trade:afterpronoun= in momentary beauty, and so slowly =verb:accumulate:afterpronoun= the drams and baubles needed for =pronouns.possessive= life." />
+    <stat Name="DV" Value="3" />
+    <stat Name="Agility" Boost="1" />
     <stat Name="Hitpoints" Value="45" />
     <part Name="ConversationScript" ConversationID="DancerConversation" />
     <skill Name="Acrobatics_Dodge" />
@@ -198,37 +245,25 @@
     <inventoryobject Blueprint="MS_Bangles" />
     <inventoryobject Blueprint="MS_dCirclet" />
     <inventoryobject Blueprint="MS_cVeil" />
-    <tag Name="BaseObject" Value="*noinherit" />
-    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSetChance" Value="25" />
     <property Name="Role" Value="Brute" />
+    <tag Name="DynamicObjectsTable:Dancers" />
   </object>
-  <object Name="MS_Dancer Still" Inherits="NPC">
-    <part Name="Brain" hostile="false" Wanders="false" Factions="Prey-100"></part>
-    <part Name="Render" DisplayName="dancer" Tile="creatures/dancer_flipped.png" RenderString="h" ColorString="&amp;w" DetailColor="K" />
-    <part Name="Description" Short="The sands and loam pound beneath =pronouns.possessive= feet, moving them in a display of rapturous athleticism. Passersby watch, admiring, as =pronouns.subjective= =verb:trade= in momentary beauty, and so slowly =verb:accumulate= the drams and baubles needed for =pronouns.possessive= life." />
+  <object Name="MS_Dancer Still" Inherits="MS_BaseDancer">
+    <part Name="Brain" Wanders="false" hostile="false"></part>
+    <part Name="Render" DisplayName="dancer" ColorString="&amp;w" DetailColor="K" />
+    <part Name="Description" Short="The sands and loam pound beneath =pronouns.possessive= feet, moving them in a display of rapturous athleticism. Passersby watch, admiring, as =pronouns.subjective= =verb:trade:afterpronoun= in momentary beauty, and so slowly =verb:accumulate:afterpronoun= the drams and baubles needed for =pronouns.possessive= life." />
     <stat Name="Agility" Boost="1"></stat>
-    <stat Name="DV" Value="3" />
-    <stat Name="Hitpoints" Value="45" />
     <part Name="ConversationScript" ConversationID="DancerConversation" />
     <skill Name="Acrobatics_Dodge" />
     <inventoryobject Blueprint="*DanceClothes" Number="1" />
     <inventoryobject Blueprint="MS_Bangles" />
     <inventoryobject Blueprint="MS_dCirclet" />
     <inventoryobject Blueprint="MS_cVeil" />
-    <tag Name="BaseObject" Value="*noinherit" />
-    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSetChance" Value="25" />
     <property Name="Role" Value="Brute" />
   </object>
-  <!-- Adventurous dancers, divided into a low level dancer without specific weapons skills and two higher level versions focused on axes and swords respectively-->
-  <object Name="MS_WildDancer" Inherits="NPC">
-    <part Name="Brain" hostile="false" Wanders="true" Factions="Prey-100"></part>
-    <part Name="Render" DisplayName="battle dancer" Tile="creatures/dancer_flipped.png" RenderString="h" ColorString="&amp;y" DetailColor="m" />
+  <object Name="MS_WildDancer" Inherits="MS_BaseDancer">
+	  <part Name="Brain" Wanders="false" hostile="false" Factions="Dancers-100"></part>
+    <part Name="Render" DisplayName="battle dancer" ColorString="&amp;y" DetailColor="m" />
     <part Name="Description" Short="A lissome figure in the scant raiment of a dancer; taking up arms and venturing into the gray unknown =pronouns.subjective= has turned =pronouns.possessive= artistry to the ends of adventure." />
     <stat Name="Strength" sValue="14,1d3"></stat>
     <stat Name="Agility" sValue="18,1d3"></stat>
@@ -238,7 +273,6 @@
     <stat Name="Ego" sValue="14,1d3"></stat>
     <stat Name="Hitpoints" Value="18"></stat>
     <stat Name="Level" Value="14"></stat>
-    <stat Name="DV" Value="3" />
     <property Name="Role" Value="Skirmisher" />
     <part Name="ConversationScript" ConversationID="AdvDancerConversation" />
     <skill Name="Acrobatics_Dodge" />
@@ -248,20 +282,16 @@
     <inventoryobject Blueprint="MS_Bangles" />
     <inventoryobject Blueprint="MS_dCirclet" />
     <inventoryobject Blueprint="MS_cVeil" />
-    <inventoryobject Blueprint="Crusty Loaf" Number="1-2"></inventoryobject>
-    <inventoryobject Blueprint="Waterskin" Number="0-2"></inventoryobject>
-    <inventoryobject Blueprint="*Junk 1" Number="1d4"></inventoryobject>
-    <inventoryobject Blueprint="*Melee Weapons 3" Number="1-2"></inventoryobject>
-    <tag Name="BaseObject" Value="*noinherit" />
-    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSetChance" Value="25" />
+    <inventoryobject Blueprint="Crusty Loaf" Number="1-2" />
+    <inventoryobject Blueprint="Waterskin" Number="0-2" />
+    <inventoryobject Blueprint="*Junk 1" Number="1d4" />
+    <inventoryobject Blueprint="*Melee Weapons 3" Number="1-2" />
+    <tag Name="DynamicObjectsTable:Dancers">
   </object>
-  <object Name="MS_SwordDancer" Inherits="NPC">
-    <part Name="Brain" hostile="false" Wanders="true" Factions="Prey-100"></part>
-    <part Name="Render" DisplayName="sword dancer" Tile="creatures/dancer_flipped.png" RenderString="h" ColorString="&amp;K" DetailColor="b" />
-    <part Name="Description" Short="A whirling mess of beads and silks, =pronouns.subjective= =verb:wield= an arcing blade. The steel sings, death and beauty combined into an entrancing whole." />
+  <object Name="MS_SwordDancer" Inherits="MS_BaseDancer">
+    <part Name="Brain" Wanders="true"></part>
+    <part Name="Render" DisplayName="sword dancer" Tile="creatures/dancer_horned_flipped.png" ColorString="&amp;K" DetailColor="b" />
+    <part Name="Description" Short="A whirling mess of beads and silks, =pronouns.subjective= =verb:wield:afterpronoun= an arcing blade. The steel sings, death and beauty combined into an entrancing whole." />
     <stat Name="Strength" sValue="18,1d3"></stat>
     <stat Name="Agility" sValue="24,1d3"></stat>
     <stat Name="Toughness" sValue="18,1d3"></stat>
@@ -270,36 +300,30 @@
     <stat Name="Ego" sValue="18,1d3"></stat>
     <stat Name="Hitpoints" Value="38"></stat>
     <stat Name="Level" Value="28"></stat>
-    <stat Name="DV" Value="3" />
     <property Name="Role" Value="Skirmisher" />
     <part Name="ConversationScript" ConversationID="AdvDancerConversation" />
-    <skill Name="Acrobatics_Dodge" />
     <skill Name="Acrobatics_Jump" />
     <skill Name="Tactics_Juke" />
     <skill Name="LongBlades2" />
     <skill Name="LongBlades2Proficiency" />
-    <skill Name="LongBlades2Swipe"></skill>
-    <skill Name="LongBlades2DuelingStance"></skill>
+    <skill Name="LongBlades2Swipe" />
+    <skill Name="LongBlades2DuelingStance" />
     <inventoryobject Blueprint="MS_WardancersMail" Number="1" />
     <inventoryobject Blueprint="*EliteDancerHands" />
     <inventoryobject Blueprint="*EliteDancerHeadgear" />
     <inventoryobject Blueprint="MS_cVeil" />
     <inventoryobject Blueprint="MS_Torque" Number="0-1"/>
     <inventoryobject Blueprint="MS_WdBuckler" Number="0-1"/>
-    <inventoryobject Blueprint="Crusty Loaf" Number="1-2"></inventoryobject>
-    <inventoryobject Blueprint="Waterskin" Number="0-2"></inventoryobject>
-    <inventoryobject Blueprint="*Junk 1" Number="3d4"></inventoryobject>
-    <inventoryobject Blueprint="*SwdDancerMelee" Number="1-2"></inventoryobject>
-    <tag Name="BaseObject" Value="*noinherit" />
-    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSetChance" Value="25" />
+    <inventoryobject Blueprint="Crusty Loaf" Number="1-2" />
+    <inventoryobject Blueprint="Waterskin" Number="0-2" />
+    <inventoryobject Blueprint="*Junk 1" Number="3d4" />
+    <inventoryobject Blueprint="*SwdDancerMelee" Number="1-2" />
+    <tag Name="DynamicObjectsTable:Dancers">
   </object>
-  <object Name="MS_AxeDancer" Inherits="NPC">
-    <part Name="Brain" hostile="false" Wanders="true" Factions="Prey-100"></part>
-    <part Name="Render" DisplayName="axe dancer" Tile="creatures/dancer_flipped.png" RenderString="h" ColorString="&amp;r" DetailColor="C" />
-    <part Name="Description" Short="A whirling mess of beads and silks, =pronouns.subjective= =verb:wield= a glinting axe. The steel sings, death and beauty combined into an entrancing whole." />
+  <object Name="MS_AxeDancer" Inherits="MS_BaseDancer">
+    <part Name="Brain" Wanders="true"></part>
+    <part Name="Render" DisplayName="axe dancer" Tile="creatures/dancer_horned_flipped.png" ColorString="&amp;r" DetailColor="C" />
+    <part Name="Description" Short="A whirling mess of beads and silks, =pronouns.subjective= =verb:wield:afterpronoun= a glinting axe. The steel sings, death and beauty combined into an entrancing whole." />
     <stat Name="Strength" sValue="20,1d3"></stat>
     <stat Name="Agility" sValue="22,1d3"></stat>
     <stat Name="Toughness" sValue="18,1d3"></stat>
@@ -308,7 +332,6 @@
     <stat Name="Ego" sValue="18,1d3"></stat>
     <stat Name="Hitpoints" Value="38"></stat>
     <stat Name="Level" Value="28"></stat>
-    <stat Name="DV" Value="3" />
     <property Name="Role" Value="Skirmisher" />
     <part Name="ConversationScript" ConversationID="AdvDancerConversation" />
     <skill Name="Acrobatics_Dodge" />
@@ -316,8 +339,8 @@
     <skill Name="Tactics_Juke" />
     <skill Name="Axe" />
     <skill Name="Axe_Expertise" />
-    <skill Name="Axe_Cleave"></skill>
-    <skill Name="Tactics_Charge"></skill>
+    <skill Name="Axe_Cleave" />
+    <skill Name="Tactics_Charge" />
     <inventoryobject Blueprint="MS_WardancersMail" Number="1" />
     <inventoryobject Blueprint="*EliteDancerHands" />
     <inventoryobject Blueprint="*EliteDancerHeadgear" />
@@ -328,16 +351,42 @@
     <inventoryobject Blueprint="Waterskin" Number="0-2"></inventoryobject>
     <inventoryobject Blueprint="*Junk 1" Number="3d4"></inventoryobject>
     <inventoryobject Blueprint="*AxeDancerMelee" Number="1-2"></inventoryobject>
-    <tag Name="BaseObject" Value="*noinherit" />
-    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
-    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
-    <tag Name="RandomPronounSetChance" Value="25" />
+    <tag Name="DynamicObjectsTable:Dancers"/>
+  </object>
+  <object Name="MS_SwordDanceHero" Inherits="MS_SwordDancer">
+     <part Name="Render" DisplayName="sword dancer" Tile="creatures/dancer_horned_flipped.png" ColorString="&amp;M" />
+     <property Name="Role" Value="Hero" />
+     <tag Name="HeroStrBoost" Value="2" />
+     <tag Name="HeroAgiBoost" Value="4" />
+     <part Name="RandomMutations" Physical="1d1" PhysicalLevel="1d6" />
+     <part Name="GivesRep" />
+     <xtagGrammar Proper="true"></xtagGrammar>
+     <tag Name="Noclone" />
+     <tag Name="DynamicObjectsTable:Dancers">
+  </object>
+  <object Name="MS_AxeDanceHero" Inherits="MS_AxeDancer">
+     <part Name="Render" DisplayName="axe dancer" Tile="creatures/dancer_horned_flipped.png" ColorString="&amp;M" />
+     <property Name="Role" Value="Hero" />
+     <tag Name="HeroStrBoost" Value="4" />
+     <tag Name="HeroAgiBoost" Value="2" />
+     <part Name="RandomMutations" Physical="1d1" PhysicalLevel="1d6" />
+     <part Name="GivesRep" />
+     <xtagGrammar Proper="true"></xtagGrammar>
+     <tag Name="Noclone" />
+     <tag Name="DynamicObjectsTable:Dancers"/>
   </object>
   
+  <!-- Alt Dancer Sprites -->
+  <object Name="MS_Horned" Inherits="BaseHumanoid">
+    <part Name="Brain" hostile="false"></part>
+    <part Name="Render" DisplayName="Horned Dancer" Tile="creatures/dancer_horned.png" RenderString="h" DetailColor="r" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+ 
   <!-- Dancejawsssss -->
   <object Name="MS_Dancejaw" Inherits="Snapjaw">
-    <part Name="Render" DisplayName="snapjaw dancer" Tile="creatures/dancejaw.png" ColorString="&amp;y" DetailColor="m"></part><part Name="Description" Short="Ones blood pounds with the rythmic pummeling of the heart; the lungs fill, striving for the next breath. The dancer whirls, believing that =pronouns.subjective= can do more with it than the last. Latched to these primal forces of being, =pronouns.subjective= howls =pronouns.possessive= joy to the Beetle Moon." />
+    <part Name="Render" DisplayName="snapjaw dancer" Tile="creatures/dancejaw.png" ColorString="&amp;y" DetailColor="m"></part>
+    <part Name="Description" Short="Ones blood pounds with the rythmic pummeling of the heart; the lungs fill, striving for the next breath. The dancer whirls, believing that =pronouns.subjective= can do more with it than the last. Latched to these primal forces of being, =pronouns.subjective= howls =pronouns.possessive= joy to the Beetle Moon." />
     <stat Name="Hitpoints" Value="20"></stat>   
     <skill Name="Acrobatics_Dodge" />
     <skill Name="Acrobatics_Jump" />
@@ -348,9 +397,123 @@
     <inventoryobject Blueprint="MS_Bangles" Number="0-1"/>
     <inventoryobject Blueprint="MS_dCirclet" Number="0-1"/>
     <inventoryobject Blueprint="*DancejawBling" Number="1d3-1"/>
+    <inventoryobject Blueprint="*Melee Weapons 3" Number="1"/>
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+  </object>
+  <!-- Veteran Dancejaws with better equipment -->
+  <object Name="MS_MasterDancejaw" Inherits="Snapjaw">
+    <part Name="Render" DisplayName="snapjaw dancer" Tile="creatures/dancejaw.png" ColorString="&amp;r" DetailColor="y"></part>
+    <part Name="Description" Short="Ones blood pounds with the rythmic pummeling of the heart; the lungs fill, striving for the next breath. The dancer whirls, believing that =pronouns.subjective= can do more with it than the last. Latched to these primal forces of being, =pronouns.subjective= howls =pronouns.possessive= joy to the Beetle Moon." />
+    <stat Name="Hitpoints" Value="30"></stat>   
+    <skill Name="Acrobatics_Dodge" />
+    <skill Name="Acrobatics_Jump" />
+    <skill Name="Tactics_Juke" />
+    <skill Name="LongBlades2" />
+    <skill Name="LongBlades2Proficiency" />
+    <skill Name="Axe" />
+    <skill Name="Axe_Expertise" />
+    <stat Name="DV" Value="3"></stat>
+    <tag Name="DynamicObjectsTable:Snapjaws"></tag>
+    <inventoryobject Blueprint="MS_WardancersMail" Number="1" />
+    <inventoryobject Blueprint="*EliteDancerHands" Number="0-1"/>
+    <inventoryobject Blueprint="*EliteDancerHeadgear" Number="0-1"/>
+    <inventoryobject Blueprint="*DancejawBling" Number="1d3-1"/>
+    <inventoryobject Blueprint="*MasterDancejawWeapons" Number="1" />
     <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
   </object>
   
   <!--Masha-->
+  <object Name="Masha" Inherits="MS_BaseDancer">
+    <part Name="Brain" Wanders="true"></part>
+    <part Name="Render" DisplayName="Masha" Tile="creatures/dancer_horned_flipped.png" RenderString="h" ColorString="&amp;K" DetailColor="c" />
+    <part Name="Description" Short="A misplaced guardian spirit, Masha seems before you inexplicably in the flesh. =pronouns.subjective= wanders with silken movement, =pronouns.possessive= starred skin gleaming with inner power." />
+    <stat Name="Strength" sValue="33"></stat>
+    <stat Name="Agility" sValue="38"></stat>
+    <stat Name="Toughness" sValue="32"></stat>
+    <stat Name="Intelligence" sValue="33"></stat>
+    <stat Name="Willpower" sValue="26"></stat>
+    <stat Name="Ego" sValue="33"></stat>
+    <stat Name="Hitpoints" Value="350"></stat>
+    <stat Name="Level" Value="31"></stat>
+    <stat Name="DV" Value="6" />
+    <property Name="Role" Value="Hero" />
+    <skill Name="Acrobatics_Jump" />
+    <skill Name="Tactics_Juke" />
+    <skill Name="Tactics_Charge" />
+    <skill Name="LongBlades2" />
+    <skill Name="LongBlades2Proficiency" />
+    <skill Name="LongBlades2Swipe" />
+    <skill Name="LongBlades2DuelingStance" />
+    <skill Name="LongBlades2ImprovedDefensiveStance" />
+    <skill Name="Dual_Wield" />
+    <skill Name="Dual_Wield_Ambidexterity" />
+    <skill Name="Dual_Wield_Two_Weapon_Fighting" />
+    <stat Name="HeatResistance" Value="50" />
+    <stat Name="ColdResistance" Value="50" />
+    <stat Name="AcidResistance" Value="25" />
+    <stat Name="ElectricResistance" Value="25" />
+    <inventoryobject Blueprint="MS_atanVeil" />
+    <inventoryobject Blueprint="MS_atanSkin" />
+    <inventoryobject Blueprint="Vibro Falx" />
+    <inventoryobject Blueprint="*MashaBackupMelee" Number="2"></inventoryobject>
+    <mutation Name="Horns" Level="10"  HornsName="antlers" DisplayName="Antlers"/>
+    <mutation Name="MultipleArms" Level="10" />
+    <mutation Name="HeightenedHearing" Level="6"/>
+    <mutation Name="Cryokinesis" Level="3"/>
+    <mutation Name="Mental Mirror" Level="1"/>
+    <tag Name="Gender" Value="female" />
+    <tag Name="HasHorns"/>
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <xtagGrammar Proper="true" />
+  </object>
   
+  <!-- Guardian Clone-->
+  <object Name="MS_GuardianClone" Inherits="NPC">
+    <part Name="Render" DisplayName="guardian clone" Tile="creatures/guardian.png" ColorString="&amp;M" TileColor="&amp;Y" DetailColor="M" RenderString="U" />
+    <part Name="Brain" Wanders="false" />
+    <stat Name="Level" Value="25" />
+    <stat Name="Strength" Value="24" />
+    <stat Name="Agility" Value="30" />
+    <stat Name="Toughness" Value="22" />
+    <stat Name="Intelligence" Value="18" />
+    <stat Name="Willpower" Value="22" />
+    <stat Name="Ego" Value="26" />
+    <stat Name="DV" Value="3" />
+    <stat Name="Speed" Value="120" />
+    <stat Name="Hitpoints" Value="200" />
+    <stat Name="HeatResistance" Value="25" />
+    <stat Name="ColdResistance" Value="25" />
+    <stat Name="AcidResistance" Value="25" />
+    <stat Name="ElectricResistance" Value="25" />
+    <part Name="Description" Short="Clad in the shimmering raiments of their station, patterns of rage knit themselves upon a pale brow. =pronouns.possessive= black blade is held high as  =pronouns.subjective= =verb:stand:afterpronoun= ready to do violence on behalf of masters long forgotten." />
+    <skill Name="Shield" />
+    <skill Name="Acrobatics_Dodge" />
+    <skill Name="Acrobatics_Jump" />
+    <skill Name="LongBlades2" />
+    <skill Name="LongBlades2Proficiency" />
+    <skill Name="LongBlades2Lunge" />
+    <skill Name="LongBlades2ImprovedAggressiveStance" />
+    <inventoryobject Blueprint="MS_atanVeil" />
+    <inventoryobject Blueprint="MS_atanSkin"  Number="0-1"/>
+    <inventoryobject Blueprint="MS_atanBangles"  Number="0-1"/>
+    <inventoryobject Blueprint="MS_atanCirclet"  Number="0-1"/>
+    <inventoryobject Blueprint="MS_atanBuckler"  Number="0-1"/>
+    <inventoryobject Blueprint="MS_QSTorque"  Number="0-1"/>
+    <inventoryobject Blueprint="MS_VibroFalx" />
+    <tag Name="RandomGender" Value="male,female,genericpersonalsingular,personalsingular" />
+    <tag Name="RandomPronounSet" Value="genericpersonalsingular,personalsingular" />
+    <tag Name="RandomPronounSetChance" Value="25" />
+    <intproperty Name="IsClone" Value="1" />
+  </object>
+  
+  <!-- object Name="BaseFactionHeroTemplate_Dancers" Inherits="BaseFactionHeroTemplate">
+  </object>
+  <object Name="SpecialFactionHeroTemplate_Dancers" Inherits="SpecialFactionHeroTemplate">
+    <tag Name="HeroIntBoost" Value="2" />
+    <tag Name="HeroAgiBoost" Value="4" />
+    <tag Name="SimpleConversation" Value="Come ,friend, and join us in the Great Dance." />
+    <tag Name="HeroNameTitleTemplate" Value="*Name* the *FashionAdj*, legendary *CreatureType*" />
+    <tag Name="HeroNameTitleFashionAdj" Value="Sleek,Free-Spirited,Beaded,Gleaming,Shimmering,Sultry,Master of Many Steps,Rainbow" />
+    <tag Name="HeroSelfPreservationThreshold" Value="2d6x5" />
+  </object -->
 </objects>

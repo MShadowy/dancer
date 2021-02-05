@@ -2,8 +2,17 @@
 <subtypes>
 <class ID="Callings" ChargenTitle="Choose Calling" SingularTitle="calling">
     <!-- Overall concept; a runaway trained as an entertainer and domestic servant -->
-    <subtype Name="Dancer" Code="m" Skills="Acrobatics_Dodge,Acrobatics_Jump,Tactics_Juke,MS_Busking" Gear="StartingGear_Dancer" Tile="creatures/dancer.png" DetailColor="r">
+	<subtype Name="Dancer" Code="m" Gear="StartingGear_Dancer" Tile="creatures/dancer.png" DetailColor="r">
       <stat Name="Agility" Bonus="2"></stat>
-	  </subtype>
+      <skills>
+         <skill Name="Acrobatics_Dodge" />
+         <skill Name="Acrobatics_Jump" />
+         <skill Name="Tactics_Juke" />
+         <skill Name="MS_Busking" />
+      </skills>
+      <reputations>
+        <reputation With="Dancers" Value="200" />
+      </reputations>
+	</subtype>
 </class>
 </subtypes>

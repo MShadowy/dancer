@@ -31,11 +31,6 @@ namespace XRL.World.Parts.Skill
             int AgiBonus = ParentObject.Statistics["Agility"].Bonus;
             int EgoBonus = ParentObject.Statistics["Ego"].Bonus;
 
-            /*if (AgiBonus > 0 && EgoBonus > 0)
-            {
-                Bonus = (AgiBonus / 2) + (EgoBonus / 2);
-            }
-            else*/ 
             if (AgiBonus > EgoBonus)
             {
                 Bonus = AgiBonus;
@@ -136,7 +131,7 @@ namespace XRL.World.Parts.Skill
             if (cell != null)
             {
                 target = cell.GetCombatTarget(ParentObject, true, false, false, null, false, false, false, null);
-                Cell dropOff = ParentObject.CurrentCell.GetFirstEmptyAdjacentCell(1, 1);
+                Cell dropOff = ParentObject.CurrentCell.GetFirstNonOccludingAdjacentCell();
                 if (target != null && target != ParentObject)
                 {
                     int DieRollA = Stat.Roll("1d20");

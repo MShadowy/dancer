@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<factions>
+
+   <faction Name="Dancers" DisplayName="Dancers" Parent="Humanoids" FormatWithArticle="false" InitialPlayerReputation="0">
+      <waterritual Skill="MS_Busking" Value="150" />
+      <feeling About="Beasts" Value="-50" />
+      <feeling About="Girsh" Value="-50" />
+      <feeling About="Templar" Value="-100" />
+      <feeling About="*" Value="0" />
+      <feeling About="Pariahs" Value="50" />
+      <interests>
+         <interest Tags="settlement" WillBuy="true" WillSell="false" />
+         <interest Tags="ruins" WillBuy="false" WillSell="true" />
+         <interest Tags="historic" WillBuy="false" WillSell="true" />
+         <interest Tags="sultan" WillBuy="false" WillSell="true" />
+         <interest Tags="humanoid,merchant" WillBuy="false" WillSell="true" />
+      </interests>
+   </faction>
+
+</factions>

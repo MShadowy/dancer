@@ -6,7 +6,7 @@
       <object Chance="20" Number="1d1" Blueprint="Long Sword6"></object>
       <object Chance="20" Number="1d1" Blueprint="Long Sword5th"></object>
       <object Chance="20" Number="1d1" Blueprint="Long Sword6th"></object>
-      <object Chance="10" Number="1d1" Blueprint="Gaslight Sword" CellChance="100"></object>
+      <object Chance="10" Number="1d1" Blueprint="2H Vibro Blade" CellChance="100"></object>
     </objects>
   </encountertable>
   
@@ -31,6 +31,15 @@
     </objects>
   </encountertable>
   
+  <encountertable Name="MasterDancejawWeapons">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="Long Sword4"></object>
+      <object Chance="20" Number="1d1" Blueprint="Long Sword5"></object>
+      <object Chance="20" Number="1d1" Blueprint="Battle Axe4"></object>
+      <object Chance="20" Number="1d1" Blueprint="Battle Axe5"></object>
+    </objects>
+  </encountertable>
+  
   <encountertable Name="DanceClothes">
     <objects>  
       <object Chance="20" Number="1d1" Blueprint="MS_dClothes1"></object>
@@ -50,6 +59,15 @@
     <objects>  
       <object Chance="20" Number="1d1" Blueprint="MS_Bangles"></object>
       <object Chance="10" Number="1d1" Blueprint="MS_WarBangles"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="MashaBackupMelee">
+    <objects>  
+      <object Chance="20" Number="1d1" Blueprint="Long Sword6"></object>
+      <object Chance="20" Number="1d1" Blueprint="Long Sword7"></object>
+      <object Chance="20" Number="1d1" Blueprint="Long Sword8"></object>
+      <object Chance="10" Number="1d1" Blueprint="MS_2H_VibroBlade" CellChance="100"></object>
     </objects>
   </encountertable>
   
@@ -124,6 +142,18 @@
       <object Chance="20" Number="1d1" Blueprint="MS_atanCirclet"></object>
       <object Chance="20" Number="1d1" Blueprint="MS_atanVeil"></object>
     </objects>
+  </encountertable>
+  
+  <encountertable Name="Artifact 5R" Load="Merge">
+    <objects>
+      <object Chance="10" Number="1d1" Blueprint="MS_2H_VibroBlade"></object>
+    </objects>
+  </encountertable>
+  
+  <encountertable Name="Melee Weapons 7R" Load="Merge">
+     <objects>
+       <object Chance="5" Number="1d1" Blueprint="MS_VibroFalx"></object>
+     </objects>
   </encountertable>
   
   <!-- Various random adventuring dancer encounters; ruins, caves, jungles -->

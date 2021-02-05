@@ -4,43 +4,64 @@
   <population Name="dClothing">
     <group Style="pickone">
       
-      <object Blueprint="MS_dClothes1" Weight="1"></object>
-      <object Blueprint="MS_dClothes2" Weight="1"></object>
-      <object Blueprint="MS_dClothes3" Weight="1"></object>
+      <object Blueprint="MS_dClothes1" Weight="1" />
+      <object Blueprint="MS_dClothes2" Weight="1" />
+      <object Blueprint="MS_dClothes3" Weight="1" />
 
     </group>
   </population>
 
   <population Name="StartingGear_Dancer">
     <group Style="pickeach">
-      <table Name="StartingGear_Common"></table>
+        <table Name="StartingGear_Common" />
 
-        <object Blueprint="HalfFullWaterskin" Number="1-2"></object>
-	    <object Blueprint="Sandals" Number="1"></object>
-	    <object Blueprint="MS_Torque" Number="0-1"></object>
-	    <object Blueprint="MS_Bangles" Number="0-1"></object>
-	    <object Blueprint="MS_dCirclet" Number="0-1"></object>
-	    <object Blueprint="MS_cVeil" Number="1"></object>	  
-	    <object Blueprint="Dagger" Number="1"></object>
-	    <object Blueprint="Crusty Loaf" Number="4-10"></object>
+        <object Blueprint="HalfFullWaterskin" Number="1-2" />
+	    <object Blueprint="Sandals" Number="1" />
+	    <object Blueprint="MS_Torque" Number="0-1" />
+	    <object Blueprint="MS_Bangles" Number="0-1" />
+	    <object Blueprint="MS_dCirclet" Number="0-1" />
+	    <object Blueprint="MS_cVeil" Number="1" />	  
+	    <object Blueprint="Dagger" Number="1" />
+	    <object Blueprint="Crusty Loaf" Number="4-10" />
 	
-        <table Name="dClothing" Number="1"></table>
-        <table Name="#Melee Weapons 1" Number="0-1"></table>
+        <table Name="dClothing" Number="1" />
+        <table Name="#Melee Weapons 1" Number="0-1" />
     </group>
   </population>
   
   <population Name="RandomDancersGear">
     <group Style="pickone">
-	    <object Weight="10" Blueprint="MS_Torque" Number="1"></object>
-	    <object Weight="15" Blueprint="MS_Bangles" Number="1"></object>
-	    <object Weight="15" Blueprint="MS_dCirclet" Number="1"></object>
-	    <object Weight="15" Blueprint="MS_cVeil" Number="1"></object>
-        <table Weight="15" Name="dClothing" Number="1"></table>
+	    <object Weight="10" Blueprint="MS_Torque" Number="1" />
+	    <object Weight="15" Blueprint="MS_Bangles" Number="1" />
+	    <object Weight="15" Blueprint="MS_dCirclet" Number="1" />
+	    <object Weight="15" Blueprint="MS_cVeil" Number="1" />
+        <table Weight="15" Name="dClothing" Number="1" />
         
-        <object Weight="5" Blueprint="MS_WardancersMail" Number="1"></object>
-        <object Weight="5" Blueprint="MS_WarBangles" Number="1"></object>
-        <object Weight="5" Blueprint="MS_WdCirclet" Number="1"></object>
-        <object Weight="5" Blueprint="MS_WdBuckler" Number="1"></object>
+        <object Weight="5" Blueprint="MS_WardancersMail" Number="1" />
+        <object Weight="5" Blueprint="MS_WarBangles" Number="1" />
+        <object Weight="5" Blueprint="MS_WdCirclet" Number="1" />
+        <object Weight="5" Blueprint="MS_WdBuckler" Number="1" />
+    </group>
+  </population>
+  
+  <population Name="RandomGoodDancersGear">
+    <group Style="pickone">
+        <object Weight="15" Blueprint="MS_WardancersMail" Number="1" />
+        <object Weight="15" Blueprint="MS_WarBangles" Number="1" />
+        <object Weight="15" Blueprint="MS_WdCirclet" Number="1" />
+        <object Weight="15" Blueprint="MS_WdBuckler" Number="1" />
+        <object Weight="10" Blueprint="MS_QSTorque" Number="1" />
+    </group>
+  </population>
+  
+  <population Name="RandomGreatDancersGear">
+    <group Style="pickone">
+        <object Weight="10" Blueprint="MS_atanSkin" Number="1" />
+        <object Weight="10" Blueprint="MS_atanBangles" Number="1" />
+        <object Weight="10" Blueprint="MS_atanCirclet" Number="1" />
+        <object Weight="10" Blueprint="MS_atanBuckler" Number="1" />
+        <object Weight="10" Blueprint="MS_atanVeil" Number="1" />
+        <object Weight="15" Blueprint="MS_QSTorque" Number="1" />
     </group>
   </population>
   
@@ -54,22 +75,75 @@
   
   <population Name="dTeachers">
 	  <group Style="pickone">
-	    <object Blueprint="MS_SwordDancer" Weight="1" Number="1"></object>
-	    <object Blueprint="MS_AxeDancer" Weight="1" Number="1"></object>
+	    <object Blueprint="MS_SwordDancer" Weight="1" Number="1" />
+	    <object Blueprint="MS_AxeDancer" Weight="1" Number="1" />
 	  </group>
+  </population>
+  
+  <population Name="GenericFactionPopulation" Load="Merge">
+     <group Name="Factions" Style="pickone">
+        <object Blueprint="Dancers" Weight="1" />
+     </group>
+  </population>
+  
+  <population Name="SafeFactionPopulation" Load="Merge">
+     <group Name="Factions" Style="pickone">
+        <object Blueprint="Dancers" Weight="8" />
+     </group>
+  </population>
+  
+  <!-- Dancer Encounter -->
+  <population Name="FactionEncounterPartyObjects_Dancers">
+	 <object Number="8-10" Blueprint="FreshWaterPuddle" Hint="Adjacent" />
+     <object Number="1-2" Blueprint="Starapple Tree" />
+     <object Number="1-2" Blueprint="Witchwood Tree" Hint="Aquatic" />
+     <object Number="20-30" Blueprint="GrassPaint" />
+     <group Name="Items" Style="pickeach">
+        <table Name="MechanimistStatues" Number="1" />
+        <object Blueprint="Brazier" Number="1"/>
+        <object Blueprint="Bread" Number="1-3" />
+        <object Blueprint="RandomWaterskin" Number="1-2" />
+        <object Number="0-2" Blueprint="Bedroll" />
+        <object Number="1" Chance="15" Blueprint="Hookah" />
+        <object Number="1" Blueprint="Low Table" />
+        <object Number="1d2" Blueprint="Floor Cushion" Hint="AdjacentToEndsWith:table" />
+     </group>
+  </population>
+  <population Name="FactionEncounterZoneObjects_Dancers">
+     <group Name="Items" Style="pickeach">
+        <table Name="Junk_ZoneTier_R" Number="0-2"/>
+        <table Name="Junk_ZoneTier" Number="2-4"/>
+        <table Name="Cash_ZoneTier" Number="2-6"/>
+     </group>
+  </population>
+  <population Name="FactionEncounterLeaderInventory_Dancers">
+     <group Name="Items" Style="pickeach">
+        <table Name="Junk_ZoneTier_R" />
+        <table Name="Scrap_ZoneTier_R" Number="0-3" />
+        <table Name="Cash_ZoneTier" Number="1-3"/>
+        <group Name="Gear" Style="pickone">
+           <table Weight="10" Number="1-2" Name="RandomGoodDancersGear" />
+           <table Weight="1" Number="1-2" Name="RandomGreatDancersGear" />
+        </group> 
+        <group Name="Extra" Style="pickone">
+           <table Weight="10" Number="0-1" Name="RandomGoodDancersGear" />
+           <table Weight="1" Number="0-1" Name="RandomGreatDancersGear" />
+        </group> 
+        <object Blueprint="RandomWaterskin" Number="1-2" />
+     </group>
   </population>
   
   <!--encounters -->
   <population Name="HookahTent" Load="Merge">
-    <group Style="pickeach">
-      <object Blueprint="MS_Dancer Still" Number="0-2" Chance="50,10" Hint="RadialFromCenter:2"></object> <!-- keep this when pop table merging is handled -->
+    <group Name="Contents" Style="pickeach">
+      <object Blueprint="MS_Dancer Still" Number="0-2" Chance="50,10" Hint="RadialFromCenter:2" /> 
     </group>
   </population>
   
   <population Name="CommonOddEncounters" Load="Merge">
-     <group Style="pickone">
+     <group Name="Types" Style="pickone">
         <!-- Stilt Dancer in the Flower Fields -->
-        <group Weight="10" Style="pickeach">
+        <group Name="Runaway" weight="2" Style="pickeach">
            <object Number="1" Blueprint="MS_Dancer"></object>
            <object Number="1" Blueprint="Bedroll"></object>
            <object Number="1" Blueprint="Brazier"></object>
@@ -77,16 +151,26 @@
            <object Number="1" Chance="15" Blueprint="Hookah"></object>
         </group>
         
-        <!-- Empty Flower Fields Camp-->
-        <group Weight="15" Style="pickeach">
+        <!-- Solo Wild Dancer -->
+        <group Name="Solo Act" weight="5" Style="pickeach">
+           <object Number="1" Blueprint="MS_WildDancer"></object>
            <object Number="1" Blueprint="Bedroll"></object>
-           <object Number="1" Blueprint="Brazier"></object>
+           <object Number="1" Blueprint="Low Table"></object>
+           <object Number="1d2" Blueprint="Floor Cushion" Hint="AdjacentToEndsWith:table"></object>
            <object Number="1" Chance="75" Blueprint="Wine Pitcher"></object>
            <object Number="1" Chance="15" Blueprint="Hookah"></object>
         </group>
         
+        <!-- Empty Flower Fields Camp-->
+        <group Name="Absent Campers" Weight="5" Style="pickeach">
+            <object Number="1" Blueprint="Bedroll"></object>
+            <object Number="1" Blueprint="Brazier"></object>
+            <object Number="1" Chance="75" Blueprint="Wine Pitcher"></object>
+            <object Number="1" Chance="15" Blueprint="Hookah"></object>
+        </group>
+        
         <!-- Dancejaw and groupies -->
-        <group Weight="5" Style="pickeach">
+        <group Name="Private Party" Weight="3" Style="pickeach">
            <object Number="1" Blueprint="MS_Dancejaw"></object>
            <object Number="1-2" Chance="50" Blueprint="Torchpost"></object>
            <object Number="1-4" Chance="75" Blueprint="Snapjaw"></object>
@@ -95,7 +179,7 @@
         </group>
         
         <!-- torches and a table-->
-        <group Weight="10" Style="pickeach">
+        <group Name="Table it for now" Weight="5" Style="pickeach">
            <object Number="1-4" Blueprint="Torchpost"></object>
 		   <object Number="1" Blueprint="Table"></object>
 		   <object Number="0-3" Blueprint="Garbage"></object>
@@ -103,25 +187,26 @@
         </group>
         
         <!--random brazier-->
-        <group Weight="5" Style="pickeach">
+        <group Name="Nightlight" Weight="7" Style="pickeach">
            <object Number="1" Blueprint="Brazier"></object>
         </group>
         
         <!-- Dancejaw Band -->
-        <group Weight="3" Style="pickeach">
-           <object Number="3-6" Blueprint="MS_Dancejaw"></object>
+        <group Name="The Boys Are Back In Town (To Kill You)" Weight="1" Style="pickeach">
+           <object Number="2-3" Blueprint="MS_Dancejaw"></object>
+           <object Number="1-2" Blueprint="MS_MasterDancejaw"></object>
            <object Number="1-4" Blueprint="Torchpost"></object>
         </group>
         
         <!--looted battle site-->
-        <group Weight="10" Style="pickeach">
+        <group Name="Gone Over" Weight="10" Style="pickeach">
            <object Number="1-4" Blueprint="Bloodsplatter"></object>
            <table Chance="33" Number="1-2" Name="DynamicObjectsTable:Corpses:Tier{zonetier}"></table>
            <object Chance="10" Number="0-2" Blueprint="Garbage"></object>
         </group>
         
         <!--corpse bog with random weapon-->
-        <group Weight="1" Style="pickeach">
+        <group Name="Bogged Down" Weight="7" Style="pickeach">
            <table Number="1" Name="DynamicInheritsTable:MeleeWeapon:Tier{zonetier}"></table>
            <object Number="4-8" Blueprint="Bloodsplatter" Hint="Adjacent"></object>
            <object Chance="33" Number="2-4" Blueprint="Bloodsplatter" Hint="Adjacent"></object>
@@ -133,17 +218,21 @@
         </group>
         
         <!--statue with dead dancer-->
-        <group Weight="2" Style="pickeach">
+        <group Name="Fallen" Weight="5" Style="pickeach">
            <table Chance="100" Weight="5" Name="MechanimistStatues" Number="1"></table>
            <table Name="HumanoidCorpse" Number="1" ></table>
-           <table Chance="50" Number="1-2" Name="RandomDancersGear" Hint="StackWithEndsWith: Corpse"></table>
+           <group Name="Gear" Style="pickone">
+              <table Weight="25" Number="1-2" Name="RandomDancersGear" Hint="StackWithEndsWith: Corpse"></table>
+              <table Weight="10" Number="1-2" Name="RandomGoodDancersGear" Hint="StackWithEndsWith: Corpse"></table>
+              <table Weight="1" Number="1-2" Name="RandomGreatDancersGear" Hint="StackWithEndsWith: Corpse"></table>
+           </group> 
            <object Number="1" Chance="100" Blueprint="Brazier" Hint="AdjacentToStartsWith:statue"></object>
            <object Number="1d2+3" Blueprint="Bloodsplatter" Hint="Adjacent"></object>
            <object Number="1" Chance="100" Blueprint="Wine Pitcher"></object>
         </group>
         
         <!--a cozy living space-->
-        <group Weight="2" Style="pickeach">
+        <group Name="This could really use some walls" Weight="1" Style="pickeach">
            <object Number="1" Blueprint="Low Table"></object>
            <object Number="1d2" Blueprint="Floor Cushion" Hint="AdjacentToEndsWith:table"></object>
            <object Number="1" Chance="100" Blueprint="Brazier"></object>
@@ -152,7 +241,7 @@
         </group>
         
         <!-- Master and Student 1 -->
-        <group Weight="2" Style="pickeach">
+        <group Name="Study Group" Weight="5" Style="pickeach">
            <object Number="1" Blueprint="MS_WildDancer"></object>
            <object Number="1" Blueprint="MS_Dancer"></object>
            <object Number="2" Blueprint="Bedroll"></object>
@@ -162,7 +251,7 @@
         </group>
         
         <!-- Master and Student 2 -->
-        <group Weight="1" Style="pickeach">
+        <group Name="Expert Tutor" Weight="3" Style="pickeach">
            <table Number="1" Name="dTeachers"></table>
            <object Number="1" Blueprint="MS_WildDancer"></object>
            <object Number="2" Blueprint="Bedroll"></object>
@@ -172,15 +261,26 @@
         </group>
         
         <!-- Battle Siblings -->
-        <group Weight="1" Style="pickeach">
+        <group Name="Close Bonds" Weight="1" Style="pickeach">
            <object Number="1" Blueprint="MS_SwordDancer"></object>
            <object Number="1" Blueprint="MS_AxeDancer"></object>
            <table Chance="10" Number="2-4" Name="DynamicObjectsTable:Corpses:Tier{zonetier}"></table>
            <object Chance="50" Number="4-6" Blueprint="Bloodsplatter"></object>
         </group>
         
-        <!-- Dancefight Dojo:small building with 1 elite dancer, 1-2 assistants (axe or sword), and around 4 to 6 students (regular battledancers) -->
+        <!-- Dancejaws vs Battledancer -->
+        <group Name="Rivalry" Weight="1" Style="pickeach">
+           <table Number="1" Name="dTeachers"></table>
+           <object Number="1" Blueprint="MS_MasterDancejaw"></object>
+           <object Number="0-2" Blueprint="MS_Dancejaw"></object>
+        </group>
      </group>
   </population>
   
+  <!-- Cryotube merge stuff -->
+  <population Name="CryotubeContents" Load="Merge">
+    <group Name="CryotubeContents" Style="pickone">
+      <object Blueprint="MS_GuardianClone" Weight="50" />
+    </group>
+  </population>
 </populations>
