@@ -88,7 +88,7 @@
   
   <population Name="SafeFactionPopulation" Load="Merge">
      <group Name="Factions" Style="pickone">
-        <object Blueprint="Dancers" Weight="8" />
+        <object Blueprint="Dancers" Weight="4" />
      </group>
   </population>
   

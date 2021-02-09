@@ -8,6 +8,8 @@
       <feeling About="Templar" Value="-100" />
       <feeling About="*" Value="0" />
       <feeling About="Pariahs" Value="50" />
+      <feeling About="Cats" Value="100" />
+      <feeling About="Dogs" Value="100" />
       <interests>
          <interest Tags="settlement" WillBuy="true" WillSell="false" />
          <interest Tags="ruins" WillBuy="false" WillSell="true" />

@@ -145,7 +145,8 @@
     <part Name="Physics" Weight="5" FlameTemperature="9999" VaporTemperature="9999"></part>
     <tag Name="Tier" Value="7"></tag>
     <tag Name="Gender" Value="plural" />
-  </object>  <object Name="MS_atanCirclet" Inherits="BaseHat"> <!-- makes abilities 5% recover faster -->
+  </object>
+  <object Name="MS_atanCirclet" Inherits="BaseHat"> <!-- makes abilities 5% recover faster -->
     <part Name="Armor" AV="2" DV="1" Elec="6" Cold="6" Heat="6" Acid="6"  WornOn="Head"></part>
     <part Name="Render" DisplayName="&amp;Ya&amp;mtan&amp;y circlet" RenderString="]" ColorString="&amp;m" DetailColor="Y" Tile="Items/ms_circlet.png"></part>
     <part Name="EquipStatBoost" Boosts="Speed:5" RequiresBodyPartCategory="Animal" />
@@ -286,7 +287,7 @@
     <inventoryobject Blueprint="Waterskin" Number="0-2" />
     <inventoryobject Blueprint="*Junk 1" Number="1d4" />
     <inventoryobject Blueprint="*Melee Weapons 3" Number="1-2" />
-    <tag Name="DynamicObjectsTable:Dancers">
+    <tag Name="DynamicObjectsTable:Dancers" />
   </object>
   <object Name="MS_SwordDancer" Inherits="MS_BaseDancer">
     <part Name="Brain" Wanders="true"></part>
@@ -318,7 +319,7 @@
     <inventoryobject Blueprint="Waterskin" Number="0-2" />
     <inventoryobject Blueprint="*Junk 1" Number="3d4" />
     <inventoryobject Blueprint="*SwdDancerMelee" Number="1-2" />
-    <tag Name="DynamicObjectsTable:Dancers">
+    <tag Name="DynamicObjectsTable:Dancers" />
   </object>
   <object Name="MS_AxeDancer" Inherits="MS_BaseDancer">
     <part Name="Brain" Wanders="true"></part>
@@ -362,7 +363,7 @@
      <part Name="GivesRep" />
      <xtagGrammar Proper="true"></xtagGrammar>
      <tag Name="Noclone" />
-     <tag Name="DynamicObjectsTable:Dancers">
+     <tag Name="DynamicObjectsTable:Dancers" />
   </object>
   <object Name="MS_AxeDanceHero" Inherits="MS_AxeDancer">
      <part Name="Render" DisplayName="axe dancer" Tile="creatures/dancer_horned_flipped.png" ColorString="&amp;M" />
@@ -377,9 +378,19 @@
   </object>
   
   <!-- Alt Dancer Sprites -->
-  <object Name="MS_Horned" Inherits="BaseHumanoid">
+  <object Name="MS_Orig" Inherits="BaseHumanoid">
+    <part Name="Brain" hostile="false"></part>
+    <part Name="Render" DisplayName="Old Dancer" Tile="creatures/dancer_orig.png" RenderString="h" DetailColor="r" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="MS_Horned_Nu" Inherits="BaseHumanoid">
     <part Name="Brain" hostile="false"></part>
     <part Name="Render" DisplayName="Horned Dancer" Tile="creatures/dancer_horned.png" RenderString="h" DetailColor="r" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+  <object Name="MS_Horned" Inherits="BaseHumanoid">
+    <part Name="Brain" hostile="false"></part>
+    <part Name="Render" DisplayName="Horned Dancer B" Tile="creatures/dancer_horned_orig.png" RenderString="h" DetailColor="r" />
     <tag Name="ExcludeFromDynamicEncounters" />
   </object>
  
